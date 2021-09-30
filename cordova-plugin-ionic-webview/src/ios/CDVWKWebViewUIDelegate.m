@@ -761,7 +761,7 @@
         shouldAllowRequest = [self defaultResourcePolicyForURL:url];
         if (!shouldAllowRequest) {
             [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:CDVPluginHandleOpenURLNotification object:url]];
-            NSLog(@"[Damian-WV] shouldAllowRequest false anyPluginsResponded false");
+            NSLog(@"[Damian-WV] shouldAllowRequest false anyPluginsResponded false for url:%@", url);
         }
     }
 
