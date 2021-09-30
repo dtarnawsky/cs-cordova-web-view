@@ -11,7 +11,7 @@
 	</author>
     <content src="index.html" />
     <access origin="*" />
-    <access allows-arbitrary-loads-for-media="true" allows-arbitrary-loads-in-web-content="true" allows-local-networking="true" origin="https://nexus.ensighten.com/*" />
+    <access allows-arbitrary-loads-for-media="true" allows-arbitrary-loads-in-web-content="true" allows-local-networking="true" origin="https://google.com/*" />
     <engine name="ios" spec="^6.2.0" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
@@ -20,8 +20,6 @@
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
     <allow-navigation href="https://www.google.com/recaptcha/*" />
-    <allow-navigation href="http://*.equifax.com/*" />
-    <allow-navigation href="https://nexus.ensighten.com/*" />
     <preference name="android-targetSdkVersion" value="30" />
     <preference name="BackupWebStorage" value="none" />
     <preference name="deployment-target" value="14" />
@@ -119,4 +117,5 @@
     <plugin name="cordova-plugin-device" spec="2.0.2" />
     <plugin name="cordova-plugin-splashscreen" spec="5.0.2" />
     <plugin name="cordova-plugin-ionic-keyboard" spec="^2.0.5" />
+    <plugin name="cordova-plugin-ionic-webview" spec="file:cordova-plugin-ionic-webview" />
 </widget>

@@ -748,6 +748,7 @@
             }
             shouldAllowRequest = (((BOOL (*)(id, SEL, id, int))objc_msgSend)(plugin, selector, navigationAction.request, navType));
             if (!shouldAllowRequest) {
+                NSLog(@"[Damian-WV] shouldAllowRequest false for url:%@ plugin:%@", url, pluginName);
                 break;
             }
         }
@@ -760,6 +761,7 @@
         shouldAllowRequest = [self defaultResourcePolicyForURL:url];
         if (!shouldAllowRequest) {
             [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:CDVPluginHandleOpenURLNotification object:url]];
+            NSLog(@"[Damian-WV] shouldAllowRequest false anyPluginsResponded false for url:%@", url);
         }
     }
 
@@ -772,6 +774,7 @@
             [scheme isEqualToString:@"maps"]) {
             [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
             decisionHandler(WKNavigationActionPolicyCancel);
+            NSLog(@"[Damian-WV] shouldAllowRequest false scheme fail %@ for url:%@", scheme, url);
         } else {
             decisionHandler(WKNavigationActionPolicyAllow);
         }
