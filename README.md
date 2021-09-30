@@ -3,7 +3,7 @@ Additional logging added to a custom cordova-plugin-ionic-webview for iOS.
 
 ## About the logging
 In iOS additional logging like:
-#### `[[Damian-WV] shouldAllowRequest false anyPluginsResponded false for url:%@`
+#### `[Damian-WV] shouldAllowRequest false anyPluginsResponded false for url:%@`
 This indicates that no plugins responded and the request for the url was blocked
 
 
